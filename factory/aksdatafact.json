@@ -1,0 +1,9 @@
+{
+	"name": "aksdatafact",
+	"location": "canadacentral",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c35105da-b13b-4b84-8a6f-81a2d32deb3d",
+		"tenantId": "a4a689b5-fe77-4b28-aba4-5dd42d1bdc86"
+	}
+}
