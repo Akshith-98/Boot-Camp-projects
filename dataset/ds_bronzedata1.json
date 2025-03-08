@@ -1,0 +1,23 @@
+{
+	"name": "ds_bronzedata1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_bronzedata",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "directdata",
+				"fileSystem": "raw-bronze"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

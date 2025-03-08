@@ -56,7 +56,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "ds_bronzedata",
+						"referenceName": "ds_bronzedata1",
 						"type": "DatasetReference"
 					}
 				]
