@@ -1,0 +1,60 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"workspaceName": {
+			"value": "aks-synapse"
+		},
+		"aks-synapse-WorkspaceDefaultSqlServer_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:aks-synapse.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
+		},
+		"ls_ETLprocess_accessToken": {
+			"value": ""
+		},
+		"ls_backenddata_connectionString": {
+			"value": ""
+		},
+		"ls_bronzedata_servicePrincipalCredential": {
+			"value": ""
+		},
+		"ls_datacleaning_accessToken": {
+			"value": ""
+		},
+		"ls_dedicated_password": {
+			"value": ""
+		},
+		"ls_gitbackenddata_credential": {
+			"value": ""
+		},
+		"ls_goldconatiner_accountKey": {
+			"value": ""
+		},
+		"aks-synapse-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://bronzeraw1.dfs.core.windows.net"
+		},
+		"ls_bronzedata_properties_typeProperties_url": {
+			"value": "https://bronzeraw1.dfs.core.windows.net/"
+		},
+		"ls_bronzedata_properties_typeProperties_tenant": {
+			"value": "a4a689b5-fe77-4b28-aba4-5dd42d1bdc86"
+		},
+		"ls_bronzedata_properties_typeProperties_servicePrincipalId": {
+			"value": "3a3f621a-cbb2-427c-966a-af4f46594f31"
+		},
+		"ls_dedicated_properties_typeProperties_server": {
+			"value": "aks-synapse.sql.azuresynapse.net"
+		},
+		"ls_dedicated_properties_typeProperties_database": {
+			"value": "aksdedicated"
+		},
+		"ls_dedicated_properties_typeProperties_userName": {
+			"value": "Akshith"
+		},
+		"ls_gitbackenddata_properties_typeProperties_username": {
+			"value": "Akshith-98"
+		},
+		"ls_goldconatiner_properties_typeProperties_url": {
+			"value": "https://bronzeraw1.dfs.core.windows.net/"
+		}
+	}
+}
