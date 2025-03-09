@@ -17,7 +17,7 @@
 				"fileSystem": "raw-bronze"
 			},
 			"columnDelimiter": ",",
-			"escapeChar": "\\",
+			"escapeChar": "\"",
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
