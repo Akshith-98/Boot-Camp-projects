@@ -1,0 +1,12 @@
+{
+	"name": "ds_dedicated",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_dedicated",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": []
+	}
+}
