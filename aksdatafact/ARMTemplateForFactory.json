@@ -15,6 +15,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'ls_bronzedata'"
 		},
+		"ls_datacleaning_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'ls_datacleaning'"
+		},
 		"ls_gitbackenddata_credential": {
 			"type": "secureString",
 			"metadata": "Secure string for 'credential' of 'ls_gitbackenddata'"
@@ -98,6 +102,26 @@
 								"parameters": {}
 							}
 						]
+					},
+					{
+						"name": "Data Cleaning and transformation",
+						"type": "DatabricksNotebook",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"notebookPath": "/Data Cleaning and Transformation"
+						},
+						"linkedServiceName": {
+							"referenceName": "ls_datacleaning",
+							"type": "LinkedServiceReference"
+						}
 					}
 				],
 				"policy": {
@@ -107,7 +131,8 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_backenddata')]",
-				"[concat(variables('factoryId'), '/datasets/ds_bronzedata1')]"
+				"[concat(variables('factoryId'), '/datasets/ds_bronzedata1')]",
+				"[concat(variables('factoryId'), '/linkedServices/ls_datacleaning')]"
 			]
 		},
 		{
@@ -239,6 +264,28 @@
 						"type": "SecureString",
 						"value": "[parameters('ls_bronzedata_accountKey')]"
 					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ls_datacleaning')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureDatabricks",
+				"typeProperties": {
+					"domain": "https://adb-400389295588420.0.azuredatabricks.net",
+					"accessToken": {
+						"type": "SecureString",
+						"value": "[parameters('ls_datacleaning_accessToken')]"
+					},
+					"newClusterNodeType": "Standard_DS3_v2",
+					"newClusterNumOfWorker": "1",
+					"newClusterVersion": "15.4.x-scala2.12",
+					"clusterOption": "Fixed",
+					"newClusterInitScripts": []
 				}
 			},
 			"dependsOn": []

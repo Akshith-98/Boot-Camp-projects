@@ -11,6 +11,9 @@
 		"ls_bronzedata_accountKey": {
 			"value": ""
 		},
+		"ls_datacleaning_accessToken": {
+			"value": ""
+		},
 		"ls_gitbackenddata_credential": {
 			"value": ""
 		},
