@@ -1,0 +1,17 @@
+{
+	"name": "bootcamp1",
+	"properties": {
+		"content": {
+			"query": "CREATE DATABASE SCOPED CREDENTIAL GoldStorageCredential\nWITH\n    IDENTITY = 'Managed Identity';\nGO\n\nCREATE EXTERNAL DATA SOURCE GoldStorage\nWITH (\n    LOCATION = 'https://bronzeraw1.dfs.core.windows.net/goldconatiner',\n    CREDENTIAL = GoldStorageCredential\n);\n\nCREATE EXTERNAL FILE FORMAT ParquetFormat\nWITH (\n    FORMAT_TYPE = PARQUET\n);\n\nCREATE EXTERNAL FILE FORMAT CsvFormat\nWITH (\n    FORMAT_TYPE = DELIMITEDTEXT,\n    FORMAT_OPTIONS (FIELD_TERMINATOR = ',', FIRST_ROW = 2)\n);\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "aksdedicated",
+				"poolName": "aksdedicated"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
