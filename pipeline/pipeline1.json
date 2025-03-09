@@ -128,9 +128,16 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"compute": {
-						"coreCount": 8,
-						"computeType": "General"
+					"dataflow": {
+						"referenceName": "Synapse_CustomerBalances_dataflow",
+						"type": "DataFlowReference"
+					},
+					"staging": {
+						"folderPath": "goldcontainer/customer_balances"
+					},
+					"integrationRuntime": {
+						"referenceName": "integrationRuntime1",
+						"type": "IntegrationRuntimeReference"
 					},
 					"traceLevel": "Fine"
 				}
