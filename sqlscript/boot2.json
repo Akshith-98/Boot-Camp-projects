@@ -1,0 +1,17 @@
+{
+	"name": "boot2",
+	"properties": {
+		"content": {
+			"query": "DROP TABLE  dbo.Goldcutomerbalances10;\nCREATE TABLE dbo.Goldcutomerbalances10\n(\n    customer_id INT,\n    total_balance FLOAT\n);\n\nSELECT * FROM dbo.Goldcutomerbalances10;\n\nSELECT * FROM dbo.Goldcutomerbalances10\nWHERE customer_id = '7';",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "aksdedicated",
+				"poolName": "aksdedicated"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
