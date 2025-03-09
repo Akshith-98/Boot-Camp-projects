@@ -1,0 +1,29 @@
+{
+	"name": "ds_goldparquet1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_goldconatiner",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "customer_balances",
+				"fileSystem": "goldcontainer"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "customer_id",
+				"type": "UTF8"
+			},
+			{
+				"name": "total_balance",
+				"type": "DOUBLE"
+			}
+		]
+	}
+}
