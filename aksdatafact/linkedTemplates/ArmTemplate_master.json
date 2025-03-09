@@ -11,9 +11,9 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_backenddata'"
 		},
-		"ls_bronzedata_accountKey": {
+		"ls_bronzedata_servicePrincipalCredential": {
 			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'ls_bronzedata'"
+			"metadata": "Secure string for 'servicePrincipalCredential' of 'ls_bronzedata'"
 		},
 		"ls_datacleaning_accessToken": {
 			"type": "secureString",
@@ -23,13 +23,33 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'credential' of 'ls_gitbackenddata'"
 		},
+		"ls_ETLprocess_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'ls_ETLprocess'"
+		},
 		"ls_bronzedata_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://bronzeraw1.dfs.core.windows.net/"
 		},
+		"ls_bronzedata_properties_typeProperties_tenant": {
+			"type": "string",
+			"defaultValue": "a4a689b5-fe77-4b28-aba4-5dd42d1bdc86"
+		},
+		"ls_bronzedata_properties_typeProperties_servicePrincipalId": {
+			"type": "string",
+			"defaultValue": "3a3f621a-cbb2-427c-966a-af4f46594f31"
+		},
+		"ls_datacleaning_properties_typeProperties_existingClusterId": {
+			"type": "string",
+			"defaultValue": "0309-001021-mhttksn9"
+		},
 		"ls_gitbackenddata_properties_typeProperties_username": {
 			"type": "string",
 			"defaultValue": "Akshith-98"
+		},
+		"ls_ETLprocess_properties_typeProperties_existingClusterId": {
+			"type": "string",
+			"defaultValue": "0309-001021-mhttksn9"
 		},
 		"containerUri": {
 			"type": "string",
@@ -61,8 +81,8 @@
 					"ls_backenddata_connectionString": {
 						"value": "[parameters('ls_backenddata_connectionString')]"
 					},
-					"ls_bronzedata_accountKey": {
-						"value": "[parameters('ls_bronzedata_accountKey')]"
+					"ls_bronzedata_servicePrincipalCredential": {
+						"value": "[parameters('ls_bronzedata_servicePrincipalCredential')]"
 					},
 					"ls_datacleaning_accessToken": {
 						"value": "[parameters('ls_datacleaning_accessToken')]"
@@ -70,11 +90,26 @@
 					"ls_gitbackenddata_credential": {
 						"value": "[parameters('ls_gitbackenddata_credential')]"
 					},
+					"ls_ETLprocess_accessToken": {
+						"value": "[parameters('ls_ETLprocess_accessToken')]"
+					},
 					"ls_bronzedata_properties_typeProperties_url": {
 						"value": "[parameters('ls_bronzedata_properties_typeProperties_url')]"
 					},
+					"ls_bronzedata_properties_typeProperties_tenant": {
+						"value": "[parameters('ls_bronzedata_properties_typeProperties_tenant')]"
+					},
+					"ls_bronzedata_properties_typeProperties_servicePrincipalId": {
+						"value": "[parameters('ls_bronzedata_properties_typeProperties_servicePrincipalId')]"
+					},
+					"ls_datacleaning_properties_typeProperties_existingClusterId": {
+						"value": "[parameters('ls_datacleaning_properties_typeProperties_existingClusterId')]"
+					},
 					"ls_gitbackenddata_properties_typeProperties_username": {
 						"value": "[parameters('ls_gitbackenddata_properties_typeProperties_username')]"
+					},
+					"ls_ETLprocess_properties_typeProperties_existingClusterId": {
+						"value": "[parameters('ls_ETLprocess_properties_typeProperties_existingClusterId')]"
 					}
 				}
 			},
